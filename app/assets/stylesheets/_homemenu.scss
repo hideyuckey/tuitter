@@ -1,0 +1,54 @@
+.home-menu{
+  color: white;
+  font-size: 18px;
+  margin-left: 30%;
+  &__icon {
+    font-size: 30px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 0 5px 10px;
+    & a {
+      text-emphasis: none;
+      &:visited {
+        color: white;
+      }
+    }
+  }
+  &__list {
+    & li {
+      font-weight: bold;
+      height: 50px;
+      line-height: 50px;
+      margin-bottom: 5px;
+      list-style: none;
+      margin-right: 20px;
+      cursor: pointer;
+      & i {
+        font-size: 20px;
+        margin: 0 10px;
+      }
+      & a {
+        text-decoration: none;
+        &:visited {
+          color: white;
+        }
+      }
+    }
+  }
+  &__tweet {
+    height: 50px;
+    line-height: 50px;
+    & a {
+      font-size: 16px;
+      font-weight: bold;
+      background-color: $orenge;
+      padding: 16px 50px;
+      border-radius: 25px;
+      cursor: pointer;
+      text-decoration: none;
+      &:visited {
+        color: white;
+      }
+    }
+  }
+}
