@@ -1,0 +1,92 @@
+.home
+  .header
+    .text
+      ホーム
+    .icon
+      = link_to '' do
+        = icon('far', 'star')
+  .time-line
+    .tweet-form
+      .icon
+      .form
+        .form__field
+          いまどうしてる？
+        .form__lower
+          .image
+            = icon('far', 'image')
+          .buttom
+            = link_to '' do
+              ツイートする
+
+    .tweet-list
+      .tweet
+        .tweet__icon
+        .tweet__content
+          .upper
+            .user-name
+              sample-user
+            .account-name
+              @sample-user
+            .time
+              ・20分
+            .button
+              = link_to '' do
+                = icon('fas', 'angle-down')
+          .text
+          sample text
+          .button
+            %li
+              .icon
+                = icon('far', 'comment')
+              .count
+                1
+            %li
+              .icon
+                =icon('fas', 'retweet')
+              .count
+                2
+            %li
+              .icon
+                = icon('far', 'heart')
+              .count
+                3
+            %li
+              .icon
+                = icon('far', 'envelope-open')
+      //以降繰り返し
+      .tweet
+        .tweet__icon
+        .tweet__content
+          .upper
+            .user-name
+              sample-user
+            .account-name
+              @sample-user
+            .time
+              ・30分
+            .button
+              = link_to '' do
+                = icon('fas', 'angle-down')
+          .text
+          sample text 2
+          .button
+            %li
+              .icon
+                = icon('far', 'comment')
+              .count
+                10
+            %li
+              .icon
+                =icon('fas', 'retweet')
+              .count
+                20
+            %li
+              .icon
+                = icon('far', 'heart')
+              .count
+                30
+            %li
+              .icon
+                = icon('far', 'envelope-open')
+      //ここまで
+
