@@ -1,5 +1,23 @@
 $haikei: rgb(25, 31, 43);
 
+$haikei2 : rgb(34, 42, 56);
+
 $sen: rgb(46, 52, 68);
 
 $orenge: rgb(247, 94, 38);
+
+$orenge2: rgb(248, 112, 62);
+
+
+.edit-form {
+  height: 35px;
+  width: 580px;
+  color: white;
+  font-size: 25px;
+  background-color: $haikei2;
+  border: none;
+  padding: 0 10px;
+  &:focus {
+    outline: none;
+  }
+}

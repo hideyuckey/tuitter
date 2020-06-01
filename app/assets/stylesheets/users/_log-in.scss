@@ -1,0 +1,88 @@
+.log-in {
+  height: 100vh;
+  width: 100vw;
+  background-color: $haikei;
+  padding-top: 50px;
+  &__content {
+    width: 600px;
+    margin: auto;
+    color: white;
+    border: solid 1px $sen;
+    border-radius: 25px;
+    padding: 20px;
+    .header {
+      display: flex;
+      height: 50px;
+      margin-bottom: 30px;
+      &__icon {
+        font-size: 30px;
+        line-height: 50px;
+        margin: 0 20px;
+      }
+      &__text {
+        font-size: 20px;
+        line-height: 50px;
+      }
+    }
+    .log-in-form {
+      .form-field {
+        background-color: $haikei2;
+        margin-bottom: 20px;
+        border-bottom: solid 5px $sen;
+        color: gray;
+        font-size: 18px;
+        &__label {
+          padding: 5px 10px;
+        }
+      }
+      .actions {
+        width: 600px;
+        padding: 0 150px;
+      }
+    }
+    .create-new-account {
+      &__text {
+        padding: 20px 0;
+        color: gray;
+        text-align: center;
+      }
+      &__link {
+        padding: 0 150px;
+        height: 50px;
+        & a {
+          font-size: 18px;
+          line-height: 50px;
+          color: white;
+          font-weight: bold;
+          background-color: $orenge;
+          padding: 16px 87px;
+          border-radius: 25px;
+          cursor: pointer;
+          text-decoration: none;
+          &:visited {
+            color: white;
+          }
+          &:hover {
+            background-color: $orenge2;
+          }
+        }
+      }
+    }
+  }
+}
+
+.log-in-button {
+  height: 50px;
+  width: 300px;
+  margin: auto;
+  color: $orenge;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border: solid 2px $orenge;
+  border-radius: 25px;
+  background-color: $haikei;
+  &:hover {
+    background-color: $haikei2;
+  }
+}
