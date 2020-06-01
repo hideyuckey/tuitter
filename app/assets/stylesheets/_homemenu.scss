@@ -38,8 +38,30 @@
   &__tweet {
     height: 50px;
     line-height: 50px;
+    margin-bottom: 50px;
     & a {
       font-size: 16px;
+      font-weight: bold;
+      background-color: $orenge;
+      padding: 16px 50px;
+      border-radius: 25px;
+      cursor: pointer;
+      text-decoration: none;
+      &:visited {
+        color: white;
+      }
+    }
+  }
+  &__user {
+    height: 50px;
+    line-height: 50px;
+    list-style: none;
+    & li {
+      margin-bottom: 10px;
+    }
+    & a {
+      font-size: 16px;
+      color: white;
       font-weight: bold;
       background-color: $orenge;
       padding: 16px 50px;
