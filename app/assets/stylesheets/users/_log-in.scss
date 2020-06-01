@@ -50,12 +50,14 @@
         padding: 0 150px;
         height: 50px;
         & a {
+          display: block;
+          width: 300px;
           font-size: 18px;
           line-height: 50px;
           color: white;
           font-weight: bold;
           background-color: $orenge;
-          padding: 16px 87px;
+          text-align: center;
           border-radius: 25px;
           cursor: pointer;
           text-decoration: none;
