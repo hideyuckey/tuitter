@@ -2,39 +2,51 @@
   .home-menu__icon
     = link_to '' do
       = icon('fab', 'twitter')
-  .home-menu__list
-    %li
+  - if user_signed_in?
+    .home-menu__list
+      %li
+        = link_to '' do
+          = icon('fas', 'home')
+          ホーム
+      %li
+        = link_to '' do
+          = icon('fas', 'search')
+          話題を検索
+      %li
+        = link_to '' do
+          = icon('fas', 'bell')
+          通知
+      %li
+        = link_to '' do
+          = icon('far', 'envelope')
+          メッセージ
+      %li
+        = link_to '' do
+          = icon('far', 'bookmark')
+          ブックマーク
+      %li
+        = link_to '' do
+          = icon('far', 'list-alt')
+          リスト
+      %li
+        = link_to '' do
+          = icon('far', 'user')
+          プロフィール
+      %li
+        = link_to '' do
+          = icon('fas', 'chevron-circle-right')
+          もっと見る
+    .home-menu__tweet
       = link_to '' do
-        = icon('fas', 'home')
-        ホーム
-    %li
-      = link_to '' do
-        = icon('fas', 'search')
-        話題を検索
-    %li
-      = link_to '' do
-        = icon('fas', 'bell')
-        通知
-    %li
-      = link_to '' do
-        = icon('far', 'envelope')
-        メッセージ
-    %li
-      = link_to '' do
-        = icon('far', 'bookmark')
-        ブックマーク
-    %li
-      = link_to '' do
-        = icon('far', 'list-alt')
-        リスト
-    %li
-      = link_to '' do
-        = icon('far', 'user')
-        プロフィール
-    %li
-      = link_to '' do
-        = icon('fas', 'chevron-circle-right')
-        もっと見る
-  .home-menu__tweet
-    = link_to '' do
-      ツイートする
+        ツイートする
+    .home-menu__user
+      = link_to destroy_user_session_path, method: :delete do
+        Log out
+  - else
+    .home-menu__user
+      %li
+        = link_to new_user_session_path do
+          Log in
+      %li
+        = link_to new_user_registration_path do
+          Sign up
