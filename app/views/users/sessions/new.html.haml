@@ -4,7 +4,7 @@
       .header__icon
         = icon('fab', 'twitter')
       .header__text
-        さあ　はじめよう
+        さあ　はじめよう!
     .log-in-form
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
         .form-field
@@ -19,8 +19,6 @@
             = f.password_field :password, autocomplete: "current-password", class: 'edit-form'
         .actions
           = f.submit "ログイン", class: 'log-in-button'
-    .error-messagre
-      = render 'users/shared/error_messages'
     .create-new-account
       .create-new-account__text
         アカウントを持っていない方
