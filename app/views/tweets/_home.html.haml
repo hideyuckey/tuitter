@@ -9,14 +9,16 @@
     .tweet-form
       .icon
       .form
-        .form__field
-          いまどうしてる？
-        .form__lower
-          .image
-            = icon('far', 'image')
-          .buttom
-            = link_to '' do
-              ツイートする
+        = form_with model: @tweet do |f|
+          .form__field
+            = f.text_area :message, placeholder: 'いまどうしてる？'
+          .form__lower
+            .image
+              = f.label :image do
+                = icon('far', 'image')
+                = f.file_field :image, class: 'form-image__hiden'
+            .buttom
+              = f.submit "ツイートする", class: 'edit-send-button'
 
     .tweet-list
       .tweet

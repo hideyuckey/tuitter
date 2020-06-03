@@ -41,6 +41,17 @@
           padding: 10px;
           font-size: 20px;
           color: gray;
+          #tweet_message {
+            background-color: $haikei;
+            min-height: 40px;
+            width: 100%;
+            border: none;
+            color: white;
+            resize: none;
+            &:focus {
+              outline: none;
+            }
+          }
         }
         &__lower {
           display: flex;
@@ -48,19 +59,29 @@
           .image {
             font-size: 22px;
             color: $orenge;
+            .form-image {
+              &__hiden {
+                display: none;
+              }
+            }
           }
           .buttom {
             height: 40px;
             line-height: 40px;
             margin-left: auto;
-            & a {
+            .edit-send-button {
               font-size: 16px;
               font-weight: bold;
+              color: white;
               background-color: $orenge;
-              padding: 12px 18px;
+              padding: 8px 18px;
+              border: none;
               border-radius: 25px;
               cursor: pointer;
               text-decoration: none;
+              &:hover {
+                background-color: $orenge2;
+              }
               &:visited {
                 color: white;
               }
@@ -124,3 +145,4 @@
     }
   }
 }
+
