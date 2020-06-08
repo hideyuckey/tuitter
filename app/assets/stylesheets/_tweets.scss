@@ -2,26 +2,25 @@
   min-height: 100vh;
   width: 100vw;
   background-color: $haikei;
-    
+  display: flex;
   .left-bar {
+    position: fixed;
     min-height: 100vh;
     width: 25vw;
-    float: left;
   }
 
   .main {
-    min-height: 100vh;
     width: 598px;
-    float: left;
     border-left: solid 1px $sen;
     border-right: solid 1px $sen;
     color: white;
+    margin-left: 25vw;
+    padding-bottom: 50px;
   }
   
   .right-bar {
     min-height: 100vh;
     width: 30vw;
-    float: left;
     color: white;
   }
 }

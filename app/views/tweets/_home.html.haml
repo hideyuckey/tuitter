@@ -9,84 +9,47 @@
     .tweet-form
       .icon
       .form
-        .form__field
-          いまどうしてる？
-        .form__lower
-          .image
-            = icon('far', 'image')
-          .buttom
-            = link_to '' do
-              ツイートする
+        = form_with model: @tweet do |f|
+          .form__field
+            = f.text_area :message, placeholder: 'いまどうしてる？'
+          .form__lower
+            .image
+              = f.label :image do
+                = icon('far', 'image')
+                = f.file_field :image, class: 'form-image__hiden'
+            .buttom
+              = f.submit "ツイートする", class: 'edit-send-button'
 
     .tweet-list
-      .tweet
-        .tweet__icon
-        .tweet__content
-          .upper
-            .user-name
-              sample-user
-            .account-name
-              @sample-user
-            .time
-              ・20分
+      - tweets.each do |tweet|
+        .tweet
+          .tweet__icon
+          .tweet__content
+            .upper
+              .user-name
+                = tweet.user.username
+              .time
+                = tweet.created_at.strftime("%Y/%m/%d %H:%M")
+            .text
+              = simple_format(tweet.message)
+            .image
+              = image_tag(tweet.image.url) if tweet.image?
             .button
-              = link_to '' do
-                = icon('fas', 'angle-down')
-          .text
-          sample text
-          .button
-            %li
-              .icon
-                = icon('far', 'comment')
-              .count
-                1
-            %li
-              .icon
-                =icon('fas', 'retweet')
-              .count
-                2
-            %li
-              .icon
-                = icon('far', 'heart')
-              .count
-                3
-            %li
-              .icon
-                = icon('far', 'envelope-open')
-      //以降繰り返し
-      .tweet
-        .tweet__icon
-        .tweet__content
-          .upper
-            .user-name
-              sample-user
-            .account-name
-              @sample-user
-            .time
-              ・30分
-            .button
-              = link_to '' do
-                = icon('fas', 'angle-down')
-          .text
-          sample text 2
-          .button
-            %li
-              .icon
-                = icon('far', 'comment')
-              .count
-                10
-            %li
-              .icon
-                =icon('fas', 'retweet')
-              .count
-                20
-            %li
-              .icon
-                = icon('far', 'heart')
-              .count
-                30
-            %li
-              .icon
-                = icon('far', 'envelope-open')
-      //ここまで
-
+              %li
+                .icon
+                  = icon('far', 'comment')
+                .count
+                  1
+              %li
+                .icon
+                  =icon('fas', 'retweet')
+                .count
+                  2
+              %li
+                .icon
+                  = icon('far', 'heart')
+                .count
+                  3
+              %li
+                .icon
+                  = icon('far', 'envelope-open')
