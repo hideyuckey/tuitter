@@ -22,6 +22,11 @@
             = f.label :パスワード
           .form-field__form
             = f.password_field :password, class: 'edit-form'
+        .form-field
+          .form-field__label
+            = f.label :パスワード確認
+          .form-field__form
+            = f.password_field :password_confirmation, autocomplete: "off", class: 'edit-form'
         .actions
           = f.submit "登録する", class: 'log-in-button'
     .create-new-account
