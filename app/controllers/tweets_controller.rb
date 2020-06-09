@@ -7,9 +7,17 @@ class TweetsController < ApplicationController
     @tweets = Tweet.all.order("created_at DESC")
   end
 
+  def show
+  end
+
   def create
     Tweet.create(tweet_params)
     redirect_to action: :index
+  end
+
+  def show_user
+    @user = User.find(params[:id])
+    @tweets = @user.tweets.includes(:user).order("created_at DESC")
   end
 
   private

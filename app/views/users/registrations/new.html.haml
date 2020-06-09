@@ -1,11 +1,11 @@
-.log-in
-  .log-in__content
+.user
+  .user__content
     .header
       .header__icon
         = icon('fab', 'twitter')
       .header__text
         新規登録
-    .log-in-form
+    .user-form
       = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
         .form-field
           .form-field__label
@@ -28,7 +28,7 @@
           .form-field__form
             = f.password_field :password_confirmation, autocomplete: "off", class: 'edit-form'
         .actions
-          = f.submit "登録する", class: 'log-in-button'
+          = f.submit "登録する", class: 'user-button'
     .create-new-account
       .create-new-account__text
         すでにアカウントをお持ちの方

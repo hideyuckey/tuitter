@@ -7,6 +7,10 @@ Rails.application.routes.draw do
 
   root 'tweets#index'
 
-  resources :tweets
+  resources :tweets do
+    member do
+      get 'show_user', to: 'tweets#show_user'
+    end
+  end
   
 end

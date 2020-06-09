@@ -1,4 +1,4 @@
-.log-in {
+.user {
   height: calc(100vh - 50px);
   width: 100vw;
   background-color: $haikei;
@@ -24,7 +24,7 @@
         line-height: 50px;
       }
     }
-    .log-in-form {
+    .user-form {
       .form-field {
         background-color: $haikei2;
         margin-bottom: 20px;
@@ -73,7 +73,7 @@
   }
 }
 
-.log-in-button {
+.user-button {
   height: 50px;
   width: 300px;
   margin: auto;
