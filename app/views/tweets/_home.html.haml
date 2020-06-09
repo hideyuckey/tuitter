@@ -19,3 +19,6 @@
                 = f.file_field :image, class: 'form-image__hiden'
             .buttom
               = f.submit "ツイートする", class: 'edit-send-button'
+              
+    .content
+      = render "tweets/tweet-list", {tweets: @tweets}

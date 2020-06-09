@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/show'
   devise_for :users, controllers: {
     registrations: 'users/registrations',
     sessions: "users/sessions",
@@ -7,10 +8,7 @@ Rails.application.routes.draw do
 
   root 'tweets#index'
 
-  resources :tweets do
-    member do
-      get 'show_user', to: 'tweets#show_user'
-    end
-  end
+  resources :tweets
+  resources :users, only: [:show]
   
 end

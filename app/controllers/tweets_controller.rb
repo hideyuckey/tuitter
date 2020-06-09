@@ -15,11 +15,6 @@ class TweetsController < ApplicationController
     redirect_to action: :index
   end
 
-  def show_user
-    @user = User.find(params[:id])
-    @tweets = @user.tweets.includes(:user).order("created_at DESC")
-  end
-
   private
   def tweet_params
     params.require(:tweet).permit(:message, :image).merge(user_id: current_user.id)
