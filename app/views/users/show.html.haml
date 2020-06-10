@@ -2,5 +2,7 @@
   .left-bar
     = render "tweets/home-menu"
   .main
-    = render "tweets/user-page", {tweets: @tweets}
+    = render "users/user-page", {tweets: @tweets}
   .right-bar
+.test
+  = render "users/edit-user", {edituser:  @edituser}

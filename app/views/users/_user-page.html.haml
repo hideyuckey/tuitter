@@ -9,8 +9,9 @@
       .user-profile__icon
         = @user.icon
       .user-profile__edit
-        = link_to '' do
-          プロフィールを編集
+        - if @user.id == current_user.id
+          = link_to '' do
+            プロフィールを編集
       .user-profile__name
         = @user.username
       .user-profile__text
