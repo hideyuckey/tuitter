@@ -19,7 +19,8 @@
       line-height: 50px;
       display: flex;
       border-bottom: solid 1px $sen;
-      .cancel {
+      .close-edit-page {
+        cursor: pointer;
         font-size: 25px;
         color: $orenge;
         margin-left: 20px;

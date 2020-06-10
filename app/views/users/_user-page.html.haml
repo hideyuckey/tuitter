@@ -10,13 +10,13 @@
         = @user.icon
       .user-profile__edit
         - if @user.id == current_user.id
-          = link_to '' do
+          = link_to '', class: "show-user-edit" do
             プロフィールを編集
       .user-profile__name
         = @user.username
       .user-profile__text
         - if @user.text?
-          = @user.text
+          = simple_format(@user.text)
         - else
           紹介文は設定されていません
 
