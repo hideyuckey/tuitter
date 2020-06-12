@@ -57,6 +57,12 @@
             }
           }
         }
+        .prev-content {
+          img {
+            max-height: 300px;
+            max-width: 520px;
+          }
+        }
         &__lower {
           display: flex;
           margin-top: 10px;

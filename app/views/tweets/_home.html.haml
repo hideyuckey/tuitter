@@ -12,6 +12,7 @@
         = form_with model: @tweet do |f|
           .form__field
             = f.text_area :message, placeholder: 'いまどうしてる？'
+          .prev-contents
           .form__lower
             .image
               = f.label :image do
