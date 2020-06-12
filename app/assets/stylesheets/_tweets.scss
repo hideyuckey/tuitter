@@ -24,3 +24,15 @@
     color: white;
   }
 }
+
+.edit-user-profile {
+  display: none;
+}
+
+.edit-user-profile.active {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+

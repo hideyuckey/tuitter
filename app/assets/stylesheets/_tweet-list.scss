@@ -1,0 +1,56 @@
+.tweet-list {
+  .tweet {
+    padding: 10px;
+    display: flex;
+    border-bottom: solid 1px $sen;
+    &__icon {
+      height: 50px;
+      width: 50px;
+      border-radius: 25px;
+      background-color: gray;
+      margin-right: 10px;
+    }
+    &__content {
+      width: 520px;
+      .upper {
+        display: flex;
+        .user-name {
+          margin-right: 5px;
+          font-weight: bold;
+          a {
+            color: white;
+            text-decoration: none;
+            &:visited {
+              color: white;
+            }
+          }
+        }
+        .time {
+          margin-right: auto;
+          color: gray;
+        }
+        .button {
+          font-size: 20px;
+          color: gray;
+          & a:visited {
+            color: gray;
+          }
+        }
+      }
+      .button {
+        margin-top: 10px;
+        display: flex;
+        font-size: 15px;
+        color: gray;
+        & li {
+          display: flex;
+
+          width: 120px;
+          .icon {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.edit-profile
+  .content
+    .header
+      .close-edit-page
+        = icon('fas', 'times')
+      .text
+        プロフィールを編集
+    .form
+      = form_with model: edituser, url: user_path, method: :patch do |f|
+        .dummy-field
+          = f.label :image do
+            .dummy-field__dummy-image
+              画像を変更する
+            .dummy-field__form
+              = f.file_field :image, class: 'form-hidden-field'
+        .dummy-field
+          = f.label :icon do
+            .dummy-field__dummy-icon
+              画像を変更する
+            .dummy-field__form
+              = f.file_field :icon, class: 'form-hidden-field'
+        .form-field
+          .form-field__label
+            = f.label :名前
+          .form-field__form
+            = f.text_field :username, class: 'user-form'
+        .form-field
+          .form-field__label
+            = f.label :自己紹介
+          .form-field__form
+            = f.text_area :text
+        .form-button
+          = f.submit "変更を保存", class: 'edit-send-button'

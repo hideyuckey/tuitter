@@ -1,0 +1,8 @@
+.top-page
+  .left-bar
+    = render "tweets/home-menu"
+  .main
+    = render "users/user-page", {tweets: @tweets}
+  .right-bar
+.edit-user-profile
+  = render "users/edit-user", {edituser:  @edituser}

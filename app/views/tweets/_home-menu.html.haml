@@ -1,11 +1,11 @@
 .home-menu
   .home-menu__icon
-    = link_to '' do
+    = link_to root_path do
       = icon('fab', 'twitter')
   - if user_signed_in?
     .home-menu__list
       %li
-        = link_to '' do
+        = link_to root_path do
           = icon('fas', 'home')
           ホーム
       %li
@@ -17,7 +17,7 @@
           = icon('fas', 'bell')
           通知
       %li
-        = link_to '' do
+        = link_to tweet_path(1) do
           = icon('far', 'envelope')
           メッセージ
       %li
@@ -29,7 +29,7 @@
           = icon('far', 'list-alt')
           リスト
       %li
-        = link_to edit_user_registration_path do
+        = link_to user_path(current_user.id) do
           = icon('far', 'user')
           プロフィール
       %li
