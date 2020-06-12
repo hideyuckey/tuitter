@@ -29,12 +29,11 @@
           margin-right: auto;
           color: gray;
         }
-        .button {
-          font-size: 20px;
-          color: gray;
-          & a:visited {
-            color: gray;
-          }
+      }
+      .image {
+        img {
+          max-height: 300px;
+          max-width: 520px;
         }
       }
       .button {
