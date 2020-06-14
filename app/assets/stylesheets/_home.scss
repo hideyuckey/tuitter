@@ -109,6 +109,10 @@
         height: 200px;
         background-color: gray;
         margin-bottom: 70px;
+        img {
+          max-height: 200px;
+          max-width: 520px;
+        }
       }
       &__icon {
         height: 130px;
@@ -119,6 +123,10 @@
         position: absolute;
         top: 132px;
         left: 10px;
+        img {
+          max-height: 130px;
+          max-width: 130px;
+        }
       }
       &__edit {
         height: 50px;
