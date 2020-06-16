@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     if current_user.update(user_params)
       redirect_to user_path
       else
-        render :edit-user
+        render "edit-user"
       end
   end
 
