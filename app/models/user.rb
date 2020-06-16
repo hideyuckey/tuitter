@@ -6,4 +6,7 @@ class User < ApplicationRecord
 
   has_many :tweets, dependent: :destroy
 
+  mount_uploader :image, ImageUploader
+  mount_uploader :icon, ImageUploader
+
 end

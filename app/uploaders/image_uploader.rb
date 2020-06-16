@@ -6,8 +6,6 @@ class ImageUploader < CarrierWave::Uploader::Base
   # Choose what kind of storage to use for this uploader:
   storage :file
 
-  # process resize_to_limit: [520, 300]
-
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
@@ -32,9 +30,9 @@ class ImageUploader < CarrierWave::Uploader::Base
   # end
 
   # Create different versions of your uploaded files:
-  # version :thumb do
-  #   process resize_to_fit: [50, 50]
-  # end
+  version :thumb do
+    process resize_to_fill: [500, 500, "Center"]
+  end
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
