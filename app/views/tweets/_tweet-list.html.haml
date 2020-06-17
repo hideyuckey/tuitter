@@ -17,21 +17,8 @@
         .image
           = image_tag(tweet.image.url) if tweet.image?
         .button
-          %li
-            .icon
-              = icon('far', 'comment')
-            .count
-              1
-          %li
-            .icon
-              =icon('fas', 'retweet')
-            .count
-              2
-          %li
-            .icon
-              = icon('far', 'heart')
-            .count
-              3
-          %li
-            .icon
-              = icon('far', 'envelope-open')
+          .icon
+            = icon('far', 'heart')
+            いいね！
+          .count
+            3

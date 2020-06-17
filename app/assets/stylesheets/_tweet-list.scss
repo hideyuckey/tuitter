@@ -41,13 +41,11 @@
         display: flex;
         font-size: 15px;
         color: gray;
-        & li {
-          display: flex;
+        .icon {
+          margin-right: 10px;
+        }
+        .count {
 
-          width: 120px;
-          .icon {
-            margin-right: 10px;
-          }
         }
       }
     }
