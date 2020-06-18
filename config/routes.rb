@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   resources :tweets do
     member do
-      get 'likes', to: 'tweets3likes'
+      get 'likes', to: 'tweets#likes'
     end
   end
 
