@@ -17,11 +17,5 @@
         .image
           = image_tag(tweet.image.url) if tweet.image?
         .like-button
-          .icon
-            = icon('far', 'heart')
-          .count
-            - if tweet.likes.present?
-              = tweet.likes
-            - else
-              0
-            いいね！
+          = render "tweets/likes-button", {tweet: tweet, current_user: current_user}
+

@@ -38,11 +38,28 @@
       }
       .like-button {
         margin-top: 10px;
-        display: flex;
         font-size: 15px;
-        color: gray;
-        .icon {
-          margin-right: 10px;
+        &__pink {
+          display: flex;
+          color: pink;
+          a {
+            text-decoration: none;
+            color: pink;
+            &:visited {
+              color: pink;
+            }
+          }
+        }
+        &__gray {
+          display: flex;
+          color: gray;
+          a {
+            text-decoration: none;
+            color: gray;
+            &:visited {
+              color: gray;
+            }
+          }
         }
       }
     }
