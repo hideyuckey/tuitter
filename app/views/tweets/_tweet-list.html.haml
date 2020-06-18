@@ -16,9 +16,12 @@
           = simple_format(tweet.message)
         .image
           = image_tag(tweet.image.url) if tweet.image?
-        .button
+        .like-button
           .icon
             = icon('far', 'heart')
-            いいね！
           .count
-            3
+            - if tweet.likes.present?
+              = tweet.likes
+            - else
+              0
+            いいね！
