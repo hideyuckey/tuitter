@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2020_06_18_010459) do
     t.bigint "user_id", null: false
     t.text "message"
     t.string "image"
-    t.integer "likes"
+    t.integer "good"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_tweets_on_user_id"
