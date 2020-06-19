@@ -1,0 +1,26 @@
+.like-button {
+  margin-top: 10px;
+  font-size: 15px;
+  &__pink {
+    display: flex;
+    color: pink;
+    a {
+      text-decoration: none;
+      color: pink;
+      &:visited {
+        color: pink;
+      }
+    }
+  }
+  &__gray {
+    display: flex;
+    color: gray;
+    a {
+      text-decoration: none;
+      color: gray;
+      &:visited {
+        color: gray;
+      }
+    }
+  }
+}

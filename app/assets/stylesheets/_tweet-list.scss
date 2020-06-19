@@ -36,20 +36,6 @@
           max-width: 520px;
         }
       }
-      .button {
-        margin-top: 10px;
-        display: flex;
-        font-size: 15px;
-        color: gray;
-        & li {
-          display: flex;
-
-          width: 120px;
-          .icon {
-            margin-right: 10px;
-          }
-        }
-      }
     }
   }
 }

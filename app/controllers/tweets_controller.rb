@@ -15,6 +15,20 @@ class TweetsController < ApplicationController
     redirect_to action: :index
   end
 
+  def likes
+    @like = Like.find_by(user_id: current_user.id, tweet_id: params[:id])
+    @tweet = Tweet.find(params[:id])
+    unless @like.present?
+      new_like = Like.create(user_id: current_user.id, tweet_id: params[:id])
+      new_good = @tweet.good + 1
+      @tweet.update(good: new_good)
+    else
+      @like.destroy
+      new_good = @tweet.good - 1 unless new_good == 0
+      @tweet.update(good: new_good)
+    end
+  end
+
   private
   def tweet_params
     params.require(:tweet).permit(:message, :image).merge(user_id: current_user.id)
