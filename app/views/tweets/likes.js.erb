@@ -1,0 +1,1 @@
+$("#button-likes_<%= @tweet.id %>").html("<%= j(render 'tweets/likes-button', {tweet: @tweet, current_user: current_user}) %>");

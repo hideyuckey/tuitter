@@ -16,6 +16,6 @@
           = simple_format(tweet.message)
         .image
           = image_tag(tweet.image.url) if tweet.image?
-        .like-button
+        #button-likes{ id: tweet.id }
           = render "tweets/likes-button", {tweet: tweet, current_user: current_user}
 

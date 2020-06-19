@@ -1,18 +1,19 @@
-- if current_user.like?(current_user,tweet)
-  .like-button__pink
-    = link_to likes_tweet_path(tweet.id), remote: true do
-      = icon('far', 'heart')
-      - if tweet.good.present?
-        = tweet.good
-      - else
-        0
-      いいね！
-- else
-  .like-button__gray
-    = link_to likes_tweet_path(tweet.id), remote: true do
-      = icon('far', 'heart')
-      - if tweet.good.present?
-        = tweet.good
-      - else
-        0
-      いいね
+.like-button
+  - if current_user.like?(current_user,tweet)
+    .like-button__pink
+      = link_to likes_tweet_path(tweet.id), remote: true do
+        = icon('far', 'heart')
+        - if tweet.good.present?
+          = tweet.good
+        - else
+          0
+        いいね！
+  - else
+    .like-button__gray
+      = link_to likes_tweet_path(tweet.id), remote: true do
+        = icon('far', 'heart')
+        - if tweet.good.present?
+          = tweet.good
+        - else
+          0
+        いいね

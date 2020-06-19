@@ -16,18 +16,17 @@ class TweetsController < ApplicationController
   end
 
   def likes
-    like = Like.find_by(user_id: current_user.id, tweet_id: params[:id])
+    @like = Like.find_by(user_id: current_user.id, tweet_id: params[:id])
     @tweet = Tweet.find(params[:id])
-    unless likes.present?
-      likes.save
-      new_likes = @tweet.good + 1
-      @tweet.update(good: new_likes)
+    unless @like.present?
+      new_like = Like.create(user_id: current_user.id, tweet_id: params[:id])
+      new_good = @tweet.good + 1
+      @tweet.update(good: new_good)
     else
-      likes.destroy
-      new_likes = @tweet.good - 1 unless new_likes == 0
-      @tweet.update(good: new_likes)
+      @like.destroy
+      new_good = @tweet.good - 1 unless new_good == 0
+      @tweet.update(good: new_good)
     end
-    binding.pry
   end
 
   private
