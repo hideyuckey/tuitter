@@ -2,6 +2,7 @@
   - tweets.each do |tweet|
     .tweet
       .tweet__icon
+        = image_tag(tweet.user.icon.thumb.url) if tweet.user.icon?
       .tweet__content
         .upper
           .user-name
