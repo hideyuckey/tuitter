@@ -47,8 +47,9 @@
           .prev-content {
             position: absolute;
             img {
-              max-height: 200px;
-              max-width: 520px;
+              height: 200px;
+              width: 100%;
+              object-fit: cover;
             }
           }
           .text {
