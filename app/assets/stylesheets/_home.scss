@@ -36,6 +36,11 @@
         width: 50px;
         border-radius: 25px;
         background-color: gray;
+        img {
+          border-radius: 50%;
+          height: 100%;
+          min-width: 100%;
+        }
       }
       .form {
         width: 520px;
@@ -110,8 +115,9 @@
         background-color: gray;
         margin-bottom: 70px;
         img {
-          max-height: 200px;
-          max-width: 520px;
+          height: 200px;
+          width: 100%;
+          object-fit: cover;
         }
       }
       &__icon {

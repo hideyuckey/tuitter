@@ -2,12 +2,10 @@
   .header
     .text
       ホーム
-    .icon
-      = link_to '' do
-        = icon('far', 'star')
   .time-line
     .tweet-form
       .icon
+        = image_tag(current_user.icon.thumb.url) if current_user.icon?
       .form
         = form_with model: @tweet do |f|
           .form__field

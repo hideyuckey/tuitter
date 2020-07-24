@@ -12,9 +12,6 @@
         = link_to user_path(current_user.id) do
           = icon('far', 'user')
           プロフィール
-    .home-menu__tweet
-      = link_to '' do
-        ツイートする
     .home-menu__user
       = link_to destroy_user_session_path, method: :delete do
         Log out
