@@ -1,11 +1,11 @@
 $(document).on('turbolinks:load', function(){
   $(function(){
     function buildHTML(image){
-      var html =`
-        <div class = 'prev-content'>
-          <img src = "${image}", class = 'prev-image'>
-        <div>
-        `
+      var html = `
+                <div class = 'prev-content'>
+                <img src = "${image}", class = 'prev-image'>
+                <div>
+                `
       return html;
     }
 
