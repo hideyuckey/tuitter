@@ -9,6 +9,7 @@ class TweetsController < ApplicationController
 
   def create
     Tweet.create(tweet_params)
+    logger.debug @product.errors.inspect
     redirect_to root_path
   end
 
